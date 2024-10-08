@@ -41,12 +41,12 @@ public class Main {
         Thread assignmentValidatorThread = new Thread(()->{
             while(finished == false){
                 if(machine.row == -1){
-                    System.out.println(machine.row);
                 }
                 else if(machine.dispensedSnack == machine.snacks[machine.row][machine.column]){
                     finished = true;
                     System.out.println("Good job! Customer is happy");
                 }
+                //add more test cases! make sure the machine does not error out or dispense bad snacks
             }
         });
         assignmentValidatorThread.start();
