@@ -28,6 +28,7 @@ public class Main {
 
             System.out.println("Customer is choosing a snack...");
             int randomTimeDelay =  (int) (Math.random() * 3);
+            machine.selectSnack();
             try {
                 Thread.sleep(randomTimeDelay * 1000);
             } catch (InterruptedException e) {
@@ -44,7 +45,6 @@ public class Main {
                 }
                 machine.addCoins();
             }
-            machine.selectSnack();
         });
         
         customerThread.start();
