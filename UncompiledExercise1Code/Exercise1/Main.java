@@ -34,6 +34,16 @@ public class Main {
                 System.out.println("The vending machine has broken beyond repair!");
                 e.printStackTrace();
             }
+            System.out.println("Customer is adding coins...");
+            for(int i = 0; i < 4; i++){
+                try {
+                    Thread.sleep(randomTimeDelay * 1000);
+                } catch (InterruptedException e) {
+                    System.out.println("The vending machine has broken beyond repair!");
+                    e.printStackTrace();
+                }
+                machine.addCoins();
+            }
             machine.selectSnack();
         });
         
