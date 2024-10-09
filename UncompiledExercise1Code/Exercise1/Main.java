@@ -5,60 +5,22 @@ import StudentCode.Exercise1;
 public class Main {
 
     volatile static boolean finished = false;
+    private static final VendingMachine vendingMachine = new VendingMachine();
+    private static final Customer customer = new Customer(vendingMachine);
+    private static final Exercise1 studentsCode = new Exercise1(vendingMachine);
 
     public static void main(String[] args) {
-
-        VendingMachine machine = new VendingMachine();
-        Exercise1 studentsCode = new Exercise1();
-
         //need threads to make this work async
-        Thread dispenseCheckerThread = new Thread(()->{
-            studentsCode.startVendingMachine(machine);
-        });
-        dispenseCheckerThread.start();
-
-        Thread customerThread = new Thread(()->{
-            System.out.println("A customer has walked to the vending machine!");
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException e) {
-                System.out.println("The vending machine has broken beyond repair!");
-                e.printStackTrace();
+        customer.start();
+        studentsCode.start();
+        while(finished == false){
+            if(vendingMachine.row == -1){
             }
-
-            System.out.println("Customer is choosing a snack...");
-            int randomTimeDelay =  (int) (Math.random() * 3);
-            machine.selectSnack();
-            try {
-                Thread.sleep(randomTimeDelay * 1000);
-            } catch (InterruptedException e) {
-                System.out.println("The vending machine has broken beyond repair!");
-                e.printStackTrace();
+            else if(vendingMachine.dispensedSnack == vendingMachine.snacks[vendingMachine.row][vendingMachine.column]){
+                finished = true;
+                System.out.println("Good job! Customer is happy");
             }
-            System.out.println("Customer is adding coins...");
-            for(int i = 0; i < 4; i++){
-                try {
-                    Thread.sleep(randomTimeDelay * 1000);
-                } catch (InterruptedException e) {
-                    System.out.println("The vending machine has broken beyond repair!");
-                    e.printStackTrace();
-                }
-                machine.addCoins();
-            }
-        });
-        
-        customerThread.start();
-        Thread assignmentValidatorThread = new Thread(()->{
-            while(finished == false){
-                if(machine.row == -1){
-                }
-                else if(machine.dispensedSnack == machine.snacks[machine.row][machine.column]){
-                    finished = true;
-                    System.out.println("Good job! Customer is happy");
-                }
-                //add more test cases! make sure the machine does not error out or dispense bad snacks
-            }
-        });
-        assignmentValidatorThread.start();
+            //add more test cases! make sure the machine does not error out or dispense bad snacks
+        }
     }
 }

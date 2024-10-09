@@ -2,7 +2,7 @@ package StudentCode;
 
 import Exercise1.VendingMachine;
 
-public class Exercise1{
+public class Exercise1 extends Thread{
     VendingMachine vendingMachine; //public boolean isVendingMachineReady // two threads declarative, remove this to make imperative on students
     
     /*
@@ -11,7 +11,10 @@ public class Exercise1{
      * This is the imperative programming approach to fix this vending machine.
      * All snacks cost 4 coins.
      */
-    public void startVendingMachine(VendingMachine vendingMachine){
-        this.vendingMachine = vendingMachine;
+    public Exercise1(VendingMachine vendingMachine) {
+        this.vendingMachine=vendingMachine;
+    }
+    public void run(){
+        /*Student Code Here */
     }
 }
