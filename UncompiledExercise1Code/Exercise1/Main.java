@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
         //need threads to make this work async
         customer.start();
-        studentsCode.run();
+        studentsCode.start();
         while(finished == false){
             if(vendingMachine.row == -1){
             }

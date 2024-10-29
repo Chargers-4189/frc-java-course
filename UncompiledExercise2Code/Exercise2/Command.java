@@ -1,8 +1,8 @@
-package StudentCode;
+package Exercise2;
 
-import Exercise2.VendingMachine;
+import StudentCode.VendingMachine;
 
-public class Exercise2{
+public class Command extends Thread{
     public boolean isfinished = false;
     private final VendingMachine vendingMachine; //public boolean isVendingMachineReady // two threads declarative, remove this to make imperative on students
     private int previousRow;
@@ -14,19 +14,26 @@ public class Exercise2{
      * This is the imperative programming approach to fix this vending machine.
      * All snacks cost 4 coins.
      */
-    public Exercise2(VendingMachine vendingMachine) {
+    public Command(VendingMachine vendingMachine) {
         this.vendingMachine=vendingMachine;
         this.previousRow = vendingMachine.getSelectedRow();
         this.previousColumn = vendingMachine.getSelectedColumn();
         this.prevCount = vendingMachine.getCoinsCount();
     }
     public void StudentCode(){
-        if(vendingMachine.getCoinsCount() == 4){
-            int selectedRow = vendingMachine.getSelectedRow();
-            int selectedColumn = vendingMachine.getSelectedColumn();
-            if(selectedRow!=previousRow && selectedColumn!=previousColumn){
-                vendingMachine.dispenseSnack(selectedRow, selectedColumn);
-                isfinished = true;
+        while (!isfinished){
+            try {
+                Thread.sleep(100);
+            } catch (Exception e) {
+
+            }
+            if(vendingMachine.getCoinsCount() == 4){
+                int selectedRow = vendingMachine.getSelectedRow();
+                int selectedColumn = vendingMachine.getSelectedColumn();
+                if(selectedRow!=previousRow && selectedColumn!=previousColumn){
+                    vendingMachine.dispenseSnack(selectedRow, selectedColumn);
+                    isfinished = true;
+                }
             }
         }
     }

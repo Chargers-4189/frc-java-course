@@ -1,5 +1,7 @@
 package Exercise2;
 
+import StudentCode.VendingMachine;
+
 public class Customer extends Thread {
     private final VendingMachine vendingMachine;
     public Customer(VendingMachine vendingMachine){

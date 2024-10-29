@@ -1,4 +1,4 @@
-package Exercise2;
+package StudentCode;
 /*
  * The VendingMachine class represents a broken vending machine with missing code from years of missed maintance.
  * Luckily, there is some code here that is usable. There is some methods to get the number of coins and what snack is currently selected.
@@ -25,7 +25,7 @@ public class VendingMachine{
         {"Trail Mix", "Rice Cakes", "Cheese"}
     };
 
-    VendingMachine(){
+    public VendingMachine(){
 
     }
 
@@ -34,7 +34,7 @@ public class VendingMachine{
      * @return the number of coins inside the vending machine.
      */
     public int getCoinsCount(){
-        return coins;
+        return 0;
     }
 
     /**
@@ -43,7 +43,7 @@ public class VendingMachine{
      * @return selected row from user.
      */
     public int getSelectedRow(){
-        return this.row;
+        return 0;
     }
 
     /**
@@ -52,7 +52,7 @@ public class VendingMachine{
      * @return selected column from user.
      */
     public int getSelectedColumn(){
-        return this.column;
+        return 0;
     }
 
     /**
@@ -63,29 +63,22 @@ public class VendingMachine{
      * @param column Column that the vending machine will dipsense.
      */
     public void dispenseSnack(int row, int column){
-        System.out.println("Dispending... " + snacks[row][column] + "!");
-        dispensedSnack = snacks[row][column];
     }
     public String getDispensedSnack(){
-        return this.dispensedSnack;
+        return null;
     }
 
     /*
     * Helper functions that students do not need access to. 
     */
-    protected void runVendingMachine(){
+    public void runVendingMachine(){
 
     }
 
-    protected void addCoins(){
-        System.out.println("Customer has added a coin...");
-        coins = coins + 1;
+    public void addCoins(){
     }
 
-    protected void selectSnack(){
-        row = (int) (Math.random() * 5);
-        column = (int) (Math.random() * 3);
-        System.out.println("Customer has chosen a snack!");
+    public void selectSnack(){
     }
     
 }
