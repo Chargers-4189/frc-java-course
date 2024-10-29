@@ -3,7 +3,7 @@ package StudentCode;
 import Exercise1.VendingMachine;
 
 public class Exercise1 extends Thread{
-    VendingMachine vendingMachine; //public boolean isVendingMachineReady // two threads declarative, remove this to make imperative on students
+    private final VendingMachine vendingMachine; //public boolean isVendingMachineReady // two threads declarative, remove this to make imperative on students
     
     /*
      * This method runs in the background. The vending machine will run this method ONCE.
@@ -14,7 +14,7 @@ public class Exercise1 extends Thread{
     public Exercise1(VendingMachine vendingMachine) {
         this.vendingMachine=vendingMachine;
     }
-    public void run(){
+    public void studentCode(){
         /*Student Code Here */
     }
 }

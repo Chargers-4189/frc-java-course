@@ -12,15 +12,13 @@ public class Main {
     public static void main(String[] args) {
         //need threads to make this work async
         customer.start();
-        studentsCode.start();
-        while(finished == false){
-            if(vendingMachine.row == -1){
-            }
-            else if(vendingMachine.dispensedSnack == vendingMachine.snacks[vendingMachine.row][vendingMachine.column]){
-                finished = true;
-                System.out.println("Good job! Customer is happy");
-            }
-            //add more test cases! make sure the machine does not error out or dispense bad snacks
+        studentsCode.studentCode();
+        if(vendingMachine.row == -1){
         }
+        else if(vendingMachine.dispensedSnack == vendingMachine.snacks[vendingMachine.row][vendingMachine.column]){
+            finished = true;
+            System.out.println("Good job! Customer is happy");
+        }
+            //add more test cases! make sure the machine does not error out or dispense bad snacks
     }
 }
