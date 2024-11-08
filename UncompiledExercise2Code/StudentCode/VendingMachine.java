@@ -40,7 +40,7 @@ public class VendingMachine{
      * Returns -1 if no snack is chosen.
      * @return selected row from user.
      */
-    //Create a public function here called getCoinsCount that returns an int.
+    //Create a public function here called getSelectedRow that returns an int.
 
     /**
      * Returns the selected column inputted into the vending machine by a customer.
