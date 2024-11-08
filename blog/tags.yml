@@ -1,19 +1,39 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+mechanical:
+  label: Mechanical
+  permalink: /Mechanical
+  description: Mechanical Department Tag
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+cad:
+  label: CAD
+  permalink: /CAD
+  description: CAD Department Tag
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+programming:
+  label: Programming
+  permalink: /Programming
+  description: Programming Department Tag
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+marketing:
+  label: Marketing
+  permalink: /Marketing
+  description: Marketing Department Tag
+
+offtopic:
+  label: Off-Topic
+  permalink: /Off-Topic
+  description: Off-Topic Blogs or Articles
+
+sponsorship:
+  label: Sponsorship
+  permalink: /Sponsorship
+  description: Sponsorship Tag
+
+design:
+  label: Design
+  permalink: /Design
+  description: Design
+
+build:
+  label: Build
+  permalink: /Build
+  description: Build

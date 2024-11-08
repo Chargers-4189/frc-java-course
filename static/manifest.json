@@ -1,0 +1,16 @@
+{
+  "short_name": "4189 Docs",
+  "name": "Charging Courses FRC Course",
+  "icons": [
+    {
+      "src": "/img/CC_Icon_Inv.png",
+      "type": "image/png",
+      "sizes": "541x541"
+    }
+  ],
+  "background_color": "#0C513E",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#1bb187",
+  "description": "FRC Programming Resources & Curriculums"
+}

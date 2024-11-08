@@ -4,38 +4,39 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Structured Course',
+    Svg: require('@site/static/img/FT-structured-course.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        We use the Experience First, Formalize Later model to invoke
+        collaborative thinking and discussions of programming concepts.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Project-Based',
+    Svg: require('@site/static/img/FT-project-based.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        We believe that project-based learning is important for understanding
+        FRC concepts, so we incorporate many robot and vision applications.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'For Beginners',
+    Svg: require('@site/static/img/FT-for-beginners.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Whether you're a seasoned Java programmer or haven't touched code, this
+        course will guide you through the necessary steps to master FRC
+        programming.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description }) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
