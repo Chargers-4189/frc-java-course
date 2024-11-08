@@ -33,6 +33,7 @@ public class VendingMachine{
      * Returns the number of coins currently in the vending machine.
      * @return the number of coins inside the vending machine.
      */
+    //Create a public function here called getCoinsCount that returns an int.
     public int getCoinsCount(){
         return 0;
     }
@@ -42,6 +43,7 @@ public class VendingMachine{
      * Returns -1 if no snack is chosen.
      * @return selected row from user.
      */
+    //Create a public function here called getCoinsCount that returns an int.
     public int getSelectedRow(){
         return 0;
     }
@@ -51,6 +53,7 @@ public class VendingMachine{
      * Returns -1 if no snack is chosen.
      * @return selected column from user.
      */
+    //Create a public function here called getSelectedColumn that returns an int.
     public int getSelectedColumn(){
         return 0;
     }
@@ -62,22 +65,27 @@ public class VendingMachine{
      * @param row Row that the vending machine will dispense.
      * @param column Column that the vending machine will dipsense.
      */
+    
+    //Create a public function here called dispenseSnack that returns nothing and takes two int parameters row and column.
     public void dispenseSnack(int row, int column){
     }
+
+    
+    //Create a public function here called getDispensedSnack that returns a String.
     public String getDispensedSnack(){
         return null;
     }
 
-    /*
-    * Helper functions that students do not need access to. 
-    */
+    //Create a public function here called runVendingMachine that returns nothing.
     public void runVendingMachine(){
 
     }
 
+    //Create a public function here called addCoins that returns nothing.
     public void addCoins(){
     }
 
+    //Create a public function here called getCoinsCount that returns nothing.
     public void selectSnack(){
     }
     
